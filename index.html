@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexey's Dev HQ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #1a1a2e;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(135deg, #16213e, #0f3460);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #00ff88;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            color: #a0a0a0;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            background: #16213e;
+            border-bottom: 2px solid #00ff88;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-item .number {
+            font-size: 2em;
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .status-item .label {
+            font-size: 0.8em;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .section {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section h2 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .section h2::before {
+            content: '> ';
+            color: #555;
+        }
+
+        .card {
+            background: #16213e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: #00ff88;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #0f3460;
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 8px 16px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .quest-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .quest-item:last-child {
+            border-bottom: none;
+        }
+
+        .quest-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff88;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .quest-checkbox.done {
+            background: #00ff88;
+            position: relative;
+        }
+
+        .quest-checkbox.done::after {
+            content: '✓';
+            color: #1a1a2e;
+            position: absolute;
+            top: -2px;
+            left: 3px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .log-entry {
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+            font-size: 0.9em;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+
+        .log-date {
+            color: #00ff88;
+            margin-right: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 0.8em;
+        }
+
+        /* TODO: кто-то должен сделать эту страницу темнее/светлее по кнопке... */
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>🚀 Alexey's Dev HQ</h1>
+        <p class="subtitle">Junior Developer in Trainign</p>
+        <!-- ^ кто-нибудь, исправьте опечатку, пожалуйста -->
+    </div>
+
+    <div class="status-bar">
+        <div class="status-item">
+            <div class="number">0</div>
+            <div class="label">Pull Requests</div>
+        </div>
+        <div class="status-item">
+            <div class="number">0</div>
+            <div class="label">Commits</div>
+        </div>
+        <div class="status-item">
+            <div class="number">0</div>
+            <div class="label">Bugs Fixed</div>
+        </div>
+        <div class="status-item">
+            <div class="number">???</div>
+            <div class="label">Coffees</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Здесь должно быть что-то интересное обо мне, но пока тут placeholder.
+            Говорят, хорошие разработчики пишут о себе. Плохие — оставляют placeholder.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">CSS</div>
+            <div class="skill-tag">Placeholder</div>
+            <div class="skill-tag">Placeholder</div>
+            <div class="skill-tag">Placeholder</div>
+            <div class="skill-tag">Google</div>
+            <!-- Замени placeholder'ы на реальные навыки или интересы -->
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Quest Log</h2>
+        <div class="card">
+            <div class="quest-item">
+                <div class="quest-checkbox done"></div>
+                <span>Установить VS Code, Node.js, Git</span>
+            </div>
+            <div class="quest-item">
+                <div class="quest-checkbox"></div>
+                <span>Сделать первый commit</span>
+            </div>
+            <div class="quest-item">
+                <div class="quest-checkbox"></div>
+                <span>Открыть первый Pull Request</span>
+            </div>
+            <div class="quest-item">
+                <div class="quest-checkbox"></div>
+                <span>Получить первый merge</span>
+            </div>
+            <div class="quest-item">
+                <div class="quest-checkbox"></div>
+                <span>Сделать правку в реальном проекте</span>
+            </div>
+            <div class="quest-item">
+                <div class="quest-checkbox"></div>
+                <span>???</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Dev Log</h2>
+        <div class="card">
+            <div class="log-entry">
+                <span class="log-date">[????-??-??]</span>
+                <span>Пока пусто. Первая запись появится после первого PR.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Links</h2>
+        <div class="card">
+            <p>🔗 <a href="#" style="color: #00ff88;">GitHub</a> (вставь свою ссылку)</p>
+            <p>🔗 <a href="#" style="color: #00ff88;">???</a> (что-нибудь ещё?)</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Built with HTML, CSS, and questionable life choices</p>
+        <p>Hosted on GitHub Pages — every merged PR updates this site ✨</p>
+    </div>
+
+</body>
+</html>
